@@ -1,20 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Ecommerce.Infrastructure
 {
-    public class DataContext : DbContext
+    public class DataContext(DbContextOptions<DataContext> options) : IdentityDbContext(options)
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
-        {
-
-        }
-
-        protected DataContext()
-        {
-        }
+        
         public DbSet<Page> Pages{ get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

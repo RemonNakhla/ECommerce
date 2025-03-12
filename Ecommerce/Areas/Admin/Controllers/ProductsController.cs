@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Ecommerce.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //[Authorize("Admin")]
+    [Authorize("Admin")]
     public class ProductsController(
                     DataContext context,
                     IWebHostEnvironment webHostEnvironment) : Controller
