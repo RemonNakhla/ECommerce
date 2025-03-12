@@ -20,3 +20,23 @@ html {
 body {
   margin-bottom: 60px;
 }
+.table.sorting tr:not(.home) {
+    cursor:pointer;
+}
+.ui-state-highlight {
+    border: 1px dashed #ccc;
+}
+
+img#imgpreview {
+    width: 200px;
+    height: auto;
+}
+
+.activeul li.active {
+    background: #0d6efd;
+    color: white !important;
+}
+
+    .activeul li.active a {
+        color: white !important;
+    }

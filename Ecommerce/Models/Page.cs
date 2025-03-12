@@ -11,5 +11,6 @@ namespace Ecommerce.Models
         public string Slug { get; set; }
         [Required, MinLength(10, ErrorMessage = "Minimum length is 3")]
         public string Body { get; set; }
+        public int Order { get; set; }
     }
 }

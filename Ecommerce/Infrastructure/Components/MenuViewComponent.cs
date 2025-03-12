@@ -9,7 +9,7 @@ namespace Ecommerce.Infrastructure.Components
         private readonly DataContext _context=dataContext;
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            return View(await _context.Pages.Where(a=>a.Slug!="home").ToListAsync());
+            return View(await _context.Pages.Where(a=>a.Slug!="home").OrderBy(a=>a.Order).ToListAsync());
         }
     }
 }
