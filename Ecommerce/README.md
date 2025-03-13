@@ -33,3 +33,11 @@ gallary to upload multi images for product)
 # authentications & authorizations using ASP.NET Core Identity
 - Register page 
 - Login Page 
+
+
+# Run Project 
+- Change connection string from appsettings.json
+- Add-Migration
+- Update-Database
+- go to program.cs and and uncomment code below //Seed roles  to add customer and admin roles
+- Run project
